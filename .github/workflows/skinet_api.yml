@@ -25,4 +25,4 @@ jobs:
 
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}/skinet/API
+          ls ${{ github.workspace }}/API
