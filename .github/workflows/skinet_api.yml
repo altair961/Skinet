@@ -28,5 +28,5 @@ jobs:
           ls ${{ github.workspace }}/API
 
       - name: Build the Docker image
-        working-directory: skinet/API
+        working-directory: API
         run: docker build . -t altair961/API:latest
