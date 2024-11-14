@@ -28,5 +28,5 @@ jobs:
           ls ${{ github.workspace }}/API
 
       - name: Build the Docker image
-        working-directory: Restaurant/Restaurant.RestApi
-        run: docker build . -t altair961/restaurant:latest
+        working-directory: skinet/API
+        run: docker build . -t altair961/API:latest
