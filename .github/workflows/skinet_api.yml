@@ -26,3 +26,7 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}/API
+
+      - name: Build the Docker image
+        working-directory: Restaurant/Restaurant.RestApi
+        run: docker build . -t altair961/restaurant:latest
