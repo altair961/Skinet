@@ -29,7 +29,7 @@ jobs:
 
       - name: Build the Docker image
         working-directory: ${{ github.workspace }}/API
-        run: docker build . -t altair961/skinetapi:latest
+        run: docker build . -t altair961/skinet-api:latest
 
       - name: Log into Docker Hub
         uses: docker/login-action@v3
@@ -39,7 +39,7 @@ jobs:
 
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}/API
+          ls ${{ github.workspace }}
 
       - name: Push the images to Docker Hub
         run: docker push altair961/skinet-api
