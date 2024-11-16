@@ -9,7 +9,9 @@ EXPOSE 8080
 
 ENV ASPNETCORE_ENVIRONMENT=Development
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+# FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
+
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["API.csproj", "."]
