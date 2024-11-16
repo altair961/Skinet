@@ -50,3 +50,8 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: | 
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/skinet-api:latest
+            docker stop skinet-api || true
+            docker rm skinet-api || true
+            docker run -d -p 80:8080 --name skinet-api ${{ secrets.DOCKERHUB_USERNAME }}/skinet-api:latest
