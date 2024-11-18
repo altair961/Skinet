@@ -14,12 +14,12 @@ WORKDIR /src
 COPY ["WebApplication1.csproj", "."]
 RUN dotnet restore "./WebApplication1.csproj"
 COPY . .
-WORKDIR "/src/WebApplication1"
+WORKDIR "/src/"
 # See everything (in a linux container)...
 RUN echo "dir -s"
 RUN echo "ls"
 RUN echo ls
-RUN dotnet build "/src/WebApplication1/WebApplication1.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "WebApplication1.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # # This stage is used to publish the service project to be copied to the final stage
 # FROM build AS publish
