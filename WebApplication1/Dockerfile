@@ -10,15 +10,11 @@ EXPOSE 443
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
 COPY ["WebApplication1.csproj", "."]
 RUN dotnet restore "./WebApplication1.csproj"
 COPY . .
 WORKDIR "/src/"
 # See everything (in a linux container)...
-RUN echo "dir -s"
-RUN echo "ls"
-RUN echo ls
 RUN dotnet build "WebApplication1.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # # This stage is used to publish the service project to be copied to the final stage
