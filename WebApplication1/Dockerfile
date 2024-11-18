@@ -19,7 +19,7 @@ WORKDIR "/src/WebApplication1"
 RUN echo "dir -s"
 RUN echo "ls"
 RUN echo ls
-RUN dotnet build "./WebApplication1/WebApplication1.csproj" -c $BUILD_CONFIGURATION -o /app/build
+RUN dotnet build "/src/WebApplication1/WebApplication1.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # # This stage is used to publish the service project to be copied to the final stage
 # FROM build AS publish
