@@ -11,7 +11,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["API/API.csproj", "API/"]
+COPY ["skinet/API/API.csproj", "API/"]
 RUN dotnet restore "./skinet/API/API.csproj"
 COPY . .
 WORKDIR "/src/API"
