@@ -28,7 +28,7 @@ jobs:
           ls ${{ github.workspace }}/skinet/API
 
       - name: Build the Docker image
-        working-directory: ${{ github.workspace }}/API
+        working-directory: ${{ github.workspace }}/skinet/API
         run: docker build . -t altair961/skinet-api:latest
 
       - name: Log into Docker Hub
