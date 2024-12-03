@@ -11,7 +11,7 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Skinet.csproj", "Skinet/"]
+COPY ["Skinet.csproj", "."]
 RUN dotnet restore "./Skinet/Skinet.csproj"
 COPY . .
 WORKDIR "/src/Skinet"
