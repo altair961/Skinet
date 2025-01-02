@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ClassLibrary1;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Skinet.Controllers
 {
@@ -15,7 +16,10 @@ namespace Skinet.Controllers
         [HttpGet("{id}")]
         public string GetProduct(int id)
         {
-            return "single product";
+            //return "single product";
+
+            var t = new Class1();
+            return t.Name;
         }
     }
 }
