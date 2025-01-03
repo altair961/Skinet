@@ -29,7 +29,7 @@ jobs:
 
       - name: Build the Docker image
         working-directory: ${{ github.workspace }}/Skinet
-        run: docker build . -t altair961/skinet-api:latest
+        run: docker build . -t altair961/skinet:latest
 
       - name: Log into Docker Hub
         uses: docker/login-action@v3
@@ -38,7 +38,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Push the images to Docker Hub
-        run: docker push altair961/skinet-api
+        run: docker push altair961/skinet
   # This is a job called "deploy"
   deploy:
     runs-on: ubuntu-latest
@@ -51,7 +51,7 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: | 
-            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/skinet-api:latest
-            docker stop skinet-api || true
-            docker rm skinet-api || true
-            docker run -d -p 80:8080 --name skinet-api ${{ secrets.DOCKERHUB_USERNAME }}/skinet-api:latest
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/skinet:latest
+            docker stop skinet || true
+            docker rm skinet || true
+            docker run -d -p 80:8080 --name skinet ${{ secrets.DOCKERHUB_USERNAME }}/skinet:latest
