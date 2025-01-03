@@ -7,5 +7,5 @@ RUN ["dotnet", "restore"]
 WORKDIR /app/Skinet
 RUN ["dotnet", "restore"]
 
-WORKDIR /app/src/AuthenticationService
+WORKDIR /app/Skinet
 RUN ["dotnet", "build"]
