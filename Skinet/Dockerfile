@@ -11,19 +11,19 @@ COPY . /app
 WORKDIR /app/ClassLibrary1
 RUN ["dotnet", "restore"]
 
-WORKDIR /app/Skinet
+WORKDIR /app/API
 RUN ["dotnet", "restore"]
 
-WORKDIR /app/Skinet
+WORKDIR /app/API
 RUN ["dotnet", "build"]
 
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./Skinet.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./API.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Skinet.dll"]
+ENTRYPOINT ["dotnet", "API.dll"]
