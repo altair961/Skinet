@@ -20,9 +20,18 @@ namespace API.Controllers
         [HttpGet]
         public ActionResult<List<Product>> GetProducts() 
         {
-            var products = _context.Products.ToList();
+            List<Product> products;
 
-            return Ok(products);
+            try
+            {
+                products = _context.Products.ToList();
+            }
+            catch (System.Exception ex)
+            {
+                return Ok(ex);
+            }
+
+            return Ok("products");
         }
 
         [HttpGet("{id}")]
