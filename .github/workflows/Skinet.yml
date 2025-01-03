@@ -25,10 +25,10 @@ jobs:
 
       - name: List files in the repository
         run: |
-          ls ${{ github.workspace }}
+          ls ${{ github.workspace }}/Skinet
 
       - name: Build the Docker image
-        working-directory: ${{ github.workspace }}/API
+        working-directory: ${{ github.workspace }}/Skinet/API
         run: docker build . -t altair961/skinet:latest
 
       - name: Log into Docker Hub
