@@ -1,6 +1,8 @@
-﻿namespace Skinet.Data
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace API.Data
 {
-    public class StoreContext 
+    public class StoreContext : DbContext
     {
     }
 }

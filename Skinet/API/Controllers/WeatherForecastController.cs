@@ -4,7 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
-namespace Skinet.Controllers
+namespace API.Controllers
 {
     [ApiController]
     [Route("[controller]")]

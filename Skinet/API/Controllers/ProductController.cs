@@ -1,7 +1,7 @@
 ﻿using ClassLibrary1;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Skinet.Controllers
+namespace API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

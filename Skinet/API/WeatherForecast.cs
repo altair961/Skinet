@@ -1,6 +1,6 @@
 using System;
 
-namespace Skinet
+namespace API
 {
     public class WeatherForecast
     {
