@@ -23,12 +23,9 @@ namespace API.Controllers
         [HttpGet]
         public async Task<ActionResult<List<Product>>> GetProducts() 
         {
-            // var products = await _context.Products.ToListAsync();
+            var products = await _context.Products.ToListAsync();
 
-            var result = new Class1().Name;
-            var result2 = new Class2().MyProperty;
-
-            return Ok(result + ' ' + result2);
+            return Ok(products);
         }
 
         [HttpGet("{id}")]
