@@ -2,6 +2,8 @@
 using System.Threading.Tasks;
 using API.Data;
 using API.Entities;
+using Core;
+using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,7 +25,10 @@ namespace API.Controllers
         {
             var products = await _context.Products.ToListAsync();
 
-            return Ok(products);
+            var result = new Class1().Name;
+            var result2 = new Class2().MyProperty;
+
+            return Ok(result + ' ' + result2);
         }
 
         [HttpGet("{id}")]

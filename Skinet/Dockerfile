@@ -8,7 +8,11 @@ EXPOSE 8080
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 COPY . /app
-WORKDIR /app/ClassLibrary1
+
+WORKDIR /app/Core
+RUN ["dotnet", "restore"]
+
+WORKDIR /app/Infrastructure
 RUN ["dotnet", "restore"]
 
 WORKDIR /app/API
