@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using API.Data;
 using API.Entities;
-using Core;
 using Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
