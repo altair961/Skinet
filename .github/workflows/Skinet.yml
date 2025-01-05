@@ -42,8 +42,6 @@ jobs:
 #            docker container prune -f
 #            docker image prune -f
 #            docker volume prune -f
-            ls
             git clone git@github.com:altair961/Skinet.git
-            ls
             docker-compose -f compose.yml build --no-cache
             docker-compose -f compose.yml up
