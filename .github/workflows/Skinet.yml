@@ -33,6 +33,9 @@ jobs:
     steps:
       - name: List files in the repository
         run: |
+          ls
+      - name: Print working directory
+        run: |
           pwd
       - name: Pull the image to VM
         uses: appleboy/ssh-action@v1.0.3
