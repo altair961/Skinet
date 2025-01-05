@@ -40,6 +40,7 @@ jobs:
           #this script runs on the VM that hosts web-server
           script: |
             docker compose version
+            ls
             docker compose -f compose.yml down
 #            docker container prune -f
 #            docker image prune -f
