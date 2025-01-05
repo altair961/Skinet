@@ -37,8 +37,9 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: | 
-            docker compose -f compose.yml down
+          script: |
+            docker compose version
+#            docker compose -f compose.yml down
 #            docker container prune -f
 #            docker image prune -f
 #            docker volume prune -f
