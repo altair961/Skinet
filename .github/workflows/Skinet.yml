@@ -15,17 +15,6 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This is a job called "build"
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: get sources
-        uses: actions/checkout@v4
-
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}/Skinet
   # This is a job called "deploy"
   deploy:
     runs-on: ubuntu-latest
