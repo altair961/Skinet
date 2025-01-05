@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+
+  backend:
+    image: skinet-backend
+    container_name: backend
+    build:
+      context: /Skinet
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
