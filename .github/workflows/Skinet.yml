@@ -39,9 +39,3 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: | 
             docker-compose -f compose.yml down
-#            docker container prune -f
-#            docker image prune -f
-#            docker volume prune -f
-            git clone git@github.com:altair961/Skinet.git
-            docker-compose -f compose.yml build --no-cache
-            docker-compose -f compose.yml up
