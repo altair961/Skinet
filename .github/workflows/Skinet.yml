@@ -47,7 +47,7 @@ jobs:
           script: |
             docker compose version
             echo | pwd
-            echo | ls
+            echo | ls -la
             docker compose -f compose.yml down
 #            docker container prune -f
 #            docker image prune -f
