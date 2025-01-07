@@ -44,5 +44,5 @@ jobs:
 #            docker container prune -f
 #            docker image prune -f
 #            docker volume prune -f
-              docker compose -f compose.yml build --no-cache
-              docker compose -f compose.yml up
+#              docker compose -f compose.yml build --no-cache
+#              docker compose -f compose.yml up
