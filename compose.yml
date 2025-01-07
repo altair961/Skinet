@@ -19,7 +19,7 @@ services:
     container_name: proxy
     build:
       context: /home/anakin-skywalker/Skinet/Proxy
-      dockerfile: /home/anakin-skywalker/Skinet/Dockerfile
+      dockerfile: /home/anakin-skywalker/Skinet/Proxy/Dockerfile
     depends_on: 
       - backend
     ports:
