@@ -7,7 +7,7 @@ services:
     container_name: backend
     build:
       context: /home/anakin-skywalker/Skinet/Skinet
-      dockerfile: Dockerfile
+      dockerfile: /home/anakin-skywalker/Skinet/Dockerfile
     stdin_open: true
     tty: true
     environment:
