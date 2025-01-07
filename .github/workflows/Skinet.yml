@@ -36,6 +36,7 @@ jobs:
             docker compose version
             echo | pwd
             echo | ls -la
+            rm -rf Skinet
             git clone https://github.com/altair961/Skinet.git
             cd Skinet
             echo | ls -la
