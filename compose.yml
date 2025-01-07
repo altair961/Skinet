@@ -6,7 +6,7 @@ services:
     image: skinet-backend
     container_name: backend
     build:
-      context: /Skinet
+      context: /home/anakin-skywalker/Skinet
       dockerfile: Dockerfile
     stdin_open: true
     tty: true
