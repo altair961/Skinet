@@ -42,3 +42,4 @@ jobs:
             echo | ls -la
             docker compose -f compose.yml down
             docker compose -f compose.yml build --no-cache
+            docker compose -f compose.yml up
