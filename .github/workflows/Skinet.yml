@@ -18,7 +18,7 @@ jobs:
   # This is a job called "deploy"
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 120 
+    timeout-minutes: 25 
     steps:
       - name: List files in the repository
         run: |
@@ -32,6 +32,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          command_timeout: 20m
           #this script runs on the VM that hosts web-server
           script: |
             docker compose version
