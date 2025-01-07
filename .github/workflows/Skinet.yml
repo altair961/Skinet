@@ -37,9 +37,9 @@ jobs:
             docker compose version
             echo | pwd
             echo | ls -la
-            docker compose -f compose.yml down
             git clone https://github.com/altair961/Skinet.git
             cd Skinet
+            docker compose -f compose.yml down
 #            docker container prune -f
 #            docker image prune -f
 #            docker volume prune -f
