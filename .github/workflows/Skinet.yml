@@ -18,7 +18,7 @@ jobs:
   # This is a job called "deploy"
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 59
     steps:
       - name: List files in the repository
         run: |
