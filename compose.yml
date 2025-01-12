@@ -9,26 +9,26 @@ services:
       context: /home/anakin-skywalker/Skinet/Skinet
       dockerfile: /home/anakin-skywalker/Skinet/Skinet/Dockerfile
       ports:
-      - "0.0.0.0:8080:8082" # (host:container) 
+        - "8080:8082" #(host:container) 
     stdin_open: true
     tty: true
     environment:
       ASPNETCORE_ENVIRONMENT: Production
 
-  proxy:
+  # proxy:
 
-    image: proxy
-    container_name: proxy
-    build:
-      context: /home/anakin-skywalker/Skinet/Proxy
-      dockerfile: /home/anakin-skywalker/Skinet/Proxy/Dockerfile
-    depends_on: 
-      - backend
-    ports:
-      - 8090:8080
-    volumes:
-      - /home/anakin-skywalker/Skinet/Proxy/nginx.conf/:/etc/nginx/nginx.conf
-      - /home/anakin-skywalker/Skinet/Proxy/access.conf/:/etc/nginx/conf.d/access.conf
-      - /home/anakin-skywalker/Skinet/Proxy/headers.main.conf/:/etc/nginx/includes/headers.main.conf
-    logging:
-      driver: none
+  #   image: proxy
+  #   container_name: proxy
+  #   build:
+  #     context: /home/anakin-skywalker/Skinet/Proxy
+  #     dockerfile: /home/anakin-skywalker/Skinet/Proxy/Dockerfile
+  #   depends_on: 
+  #     - backend
+  #   ports:
+  #     - 8090:8080
+  #   volumes:
+  #     - /home/anakin-skywalker/Skinet/Proxy/nginx.conf/:/etc/nginx/nginx.conf
+  #     - /home/anakin-skywalker/Skinet/Proxy/access.conf/:/etc/nginx/conf.d/access.conf
+  #     - /home/anakin-skywalker/Skinet/Proxy/headers.main.conf/:/etc/nginx/includes/headers.main.conf
+  #   logging:
+  #     driver: none
