@@ -7,8 +7,8 @@ services:
     build:
       context: /home/anakin-skywalker/Skinet/Skinet
       dockerfile: /home/anakin-skywalker/Skinet/Skinet/Dockerfile
-      ports:
-        - 5011:8082
+    ports:
+      - 5011:8082
     stdin_open: true
     tty: true
     environment:
