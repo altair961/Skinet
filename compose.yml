@@ -8,7 +8,7 @@ services:
       context: /home/anakin-skywalker/Skinet/Skinet
       dockerfile: /home/anakin-skywalker/Skinet/Skinet/Dockerfile
     ports:
-      - 8080:5011 #(host:container)
+      - 5011 #(host:container)
     stdin_open: true
     tty: true
     environment:
