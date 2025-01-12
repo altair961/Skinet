@@ -8,7 +8,7 @@ services:
       context: /home/anakin-skywalker/Skinet/Skinet
       dockerfile: /home/anakin-skywalker/Skinet/Skinet/Dockerfile
     ports:
-      - 5011:8082
+      - 8080:5011
     stdin_open: true
     tty: true
     environment:
@@ -31,3 +31,5 @@ services:
   #     - /home/anakin-skywalker/Skinet/Proxy/headers.main.conf/:/etc/nginx/includes/headers.main.conf
   #   logging:
   #     driver: none
+
+  #(host:container)
